@@ -1,33 +1,122 @@
-.App {
-  text-align: center;
+:root {
+  --primary-color: #FA7268;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+body {
+  color: #444;
+  font-family: sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.main-header {
+  background-color: gold;
+  margin-bottom: 15px;
+  padding: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.main-header h1 {
+  margin: 0 auto;
+  font-size: 110%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer {
+  display: inline-block;
+  font-style: italic;
+  padding: 0 15px;
+}
+
+.item-list {
+  padding: 0 15px;
+}
+
+.item-list-wrapper {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.item-single {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  grid-gap: 1rem;
+  padding: 5px 0;
+}
+
+.item-single.item-oos {
+  color: #AAA;
+  font-style: italic;
+}
+
+.search-form input {
+  background-color: #F3F3F3;
+  border: 1px solid #EEE;
+  border-radius: .3rem;
+  box-sizing: border-box;
+  display: block;
+  margin-bottom: 15px;
+  outline: 0;
+  padding: 5px 7px;
+  width: 100%;
+}
+
+.search-form input:focus {
+  box-shadow: 0 0 6px 0 var(--primary-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: .3rem;
+  color: #FFF;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 7px;
+}
+
+button:hover,
+button:focus,
+button:active {
+  background-color: transparent;
+  color: var(--primary-color);
+  box-shadow: 0 0 0 1px var(--primary-color);
+  outline: 0;
+}
+
+button.disabled,
+button:disabled {
+  cursor: not-allowed;
+  opacity: .75;
+}
+
+button + a {
+  display: inline-block;
+  margin-left: 8px;
+}
+
+.edit-form {
+  padding: 0 15px;
+}
+
+.edit-fields {
+  margin-top: 7px;
+}
+
+.edit-fields + .edit-fields {
+  border-top: 1px solid #EEE;
+  padding-top: 7px;
+}
+
+.edit-fields input[type="text"],
+.edit-fields input[type="number"],
+.edit-fields input[type="date"] {
+  background-color: #F3F3F3;
+  border: 1px solid #EEE;
+  border-radius: .3rem;
+  box-sizing: border-box;
+  padding: 5px 7px;
+}
+
+.edit-fields .form-group {
+  margin-bottom: 15px;
 }
